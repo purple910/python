@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云端留言板</title>
+</head>
+<body>
+    <h1>提交留言</h1>
+    <form action="/msggate/" method="post">
+        {% csrf_token %}
+        发送方:<input type="text" name="userA"><br>
+        接收方:<input name="userB"><br>
+        消息文:<input name="msg"><br>
+        <input type="submit" value="留言提交">
+    </form>
+
+    <h1>获取留言</h1>
+    <form method="get" action="/msggate/">
+        接收方<input type="text" name="userC"><br>
+        <input type="submit" value="留言获取">
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>留言时间</th>
+            <th>留言来源</th>
+            <th>留言信息</th>
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <!--
+                lower,escape,linebreaks,date,length
+                {{ name|lower }} 小写
+                {{ my_date|date:"Y-m-d" }}
+            -->
+            {% for line in data %}
+            <tr>
+                <td>{{ line.time }}</td>
+                <td align="center">{{ line.userA }}</td>
+                <td>{{ line.msg }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
