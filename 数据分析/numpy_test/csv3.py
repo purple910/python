@@ -5,7 +5,7 @@
     @File    : csv3.py
     @Software: PyCharm
 """
-import numpy as np
+import numpy_test as np
 
 a = np.loadtxt("b.csv", delimiter=",")
 print(a)
