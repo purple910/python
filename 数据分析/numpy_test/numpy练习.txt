@@ -1,0 +1,109 @@
+6. 创建一个长度为10并且除了第五个值为1的空向量
+
+(提示: array[4])
+
+In [ ]:
+
+# Z = np.zeros(10)
+
+# Z[4] = 1
+
+# print(Z)
+
+7. 创建一个值域范围从10到49的向量
+
+(提示: np.arange)
+
+In [ ]:
+
+# Z = np.arange(10,50)
+
+# print(Z)
+
+8. 反转一个向量(第一个元素变为最后一个)
+
+(提示: array[::-1])
+
+In [ ]:
+
+# Z = np.arange(50)
+
+# Z = Z[::-1]
+
+# print(Z)
+
+9. 创建一个 3x3 并且值从0到8的矩阵
+
+(提示: reshape)
+
+In [ ]:
+
+# Z = np.arange(9).reshape(3,3)
+
+# print(Z)
+
+10. 找到数组[1,2,0,0,4,0]中非0元素的位置索引
+
+(提示: np.nonzero)
+
+In [ ]:
+
+# nz = np.nonzero([1,2,0,0,4,0])
+
+# print(nz)
+
+11. 创建一个 3x3 的单位矩阵
+
+(提示: np.eye)
+
+In [ ]:
+
+# Z = np.eye(3)
+
+# print(Z)
+
+12. 创建一个 3x3x3的随机数组
+
+(提示: np.random.random)
+
+In [ ]:
+
+# Z = np.random.random((3,3,3))
+
+# print(Z)
+
+13. 创建一个 10x10 的随机数组并找到它的最大值和最小值
+
+(提示: min, max)
+
+In [ ]:
+
+# Z = np.random.random((10,10))
+
+# Zmin, Zmax = Z.min(), Z.max()
+
+# print(Zmin, Zmax)
+
+14. 创建一个长度为30的随机向量并找到它的平均值
+
+(提示: mean)
+
+In [ ]:
+
+# Z = np.random.random(30)
+
+# m = Z.mean()
+
+# print(m)
+
+15.创建一二维数组，其中边界值为1，其余值为0
+
+(提示: array[1:-1, 1:-1])
+
+In [ ]:
+
+# Z = np.ones((10,10))
+
+# Z[1:-1,1:-1] = 0
+
+# print(Z)

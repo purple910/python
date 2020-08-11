@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
-
 # Create your views here.
-def hello(request):
+from django.shortcuts import render
+
+
+def hello2(request):
     return render(request, "Demo.html")

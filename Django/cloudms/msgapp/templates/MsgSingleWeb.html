@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云端留言板</title>
+</head>
+<body>
+<h1>提交留言</h1>
+<form action="/msggate/" method="post">
+    {% csrf_token %}
+    发送方 <label>
+    <input type="text" name="userA">
+</label><br>
+    接受方 <label>
+    <input type="text" name="userB">
+</label><br>
+    消息文 <label>
+    <input type="text" name="msg">
+</label><br>
+    <input type="submit" value="提交留言">
+</form>
+
+<h1>获取留言</h1>
+<form action="/msggate/" method="get">
+    接受方 <label>
+    <input type="text" name="userC">
+</label><br>
+    <input type="submit" value="获取留言">
+</form>
+<br>
+<table border="1">
+    <thead>
+    <th>留言时间</th>
+    <th>留言来源</th>
+    <th>留言信息</th>
+    </thead>
+    <tbody>
+    {% for line in data %}
+    <tr>
+        <td>{{line.time}}</td>
+        <td align="center">{{line.userA}}</td>
+        <td>{{line.msg}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

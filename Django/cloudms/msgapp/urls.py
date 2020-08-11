@@ -1,12 +1,5 @@
-"""
-    @Time    : 2020/2/17 10:27
-    @Author  : fate
-    @Site    : 
-    @File    : urls.py
-    @Software: PyCharm
-"""
-from django.urls import path
 from . import views
+from django.urls import path
 
 """
     精确字符串:ars/1212/

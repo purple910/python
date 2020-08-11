@@ -15,8 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from msgapp import views as msgviews
 
 urlpatterns = [
+    path('msggate/', include('msgapp.urls')),
     path('admin/', admin.site.urls),
-    path('msggate/', include('msgapp.urls'))
+
+    # path('', msgviews.homeproc),
+    # path('', msgviews.homeproc1),
+    path('', msgviews.homeproc2),
+
+    path('aa/', msgviews.aa),
+    path('download/', msgviews.file_download),
+    path('uploadFile/', msgviews.upload_file),
+
+    path('playground/', msgviews.pgproc)
 ]
